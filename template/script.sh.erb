@@ -3,7 +3,8 @@
 # Clean the environment
 module purge
 
-
+export XDG_RUNTIME_DIR="/tmp/${UID}"
+export PATH="$PATH:/opt/TurboVNC/bin"
 # Set working directory to home directory
 cd "${HOME}"
 

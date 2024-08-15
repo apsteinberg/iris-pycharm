@@ -41,4 +41,4 @@ module list
 # Launch PyCharm
 pycharm_path=<%= context.pycharm_path %>
 set -x
-${pycharm_path}/bin/pycharm.sh
+echo y | {pycharm_path}/bin/pycharm.sh

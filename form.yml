@@ -5,6 +5,7 @@ form:
   - num_hours
   - memory
   - num_cores
+  - num_gpus
   - pycharm_path
   - bc_vnc_resolution
     
@@ -35,9 +36,18 @@ attributes:
     max: 20
     step: 1
     value: 1
+  num_gpus:
+    widget: number_field
+    label: "Number of gpus"
+    required: true
+    help: "Set the number of gpus"
+    min: 1
+    max: 20
+    step: 1
+    value: 1
   pycharm_path:
     label: Path to Pycharm installation
     help: Enter path to pycharm installation
-    value: "/home/preskaa/pycharm-2024.2/"
+    value: "/home/preskaa/pycharm-2024.2"
   bc_vnc_resolution:
     required: true

@@ -19,5 +19,7 @@ script:
      - "<%= num_cores %>"
      - "--mem"
      - "<%= memory %>G"
+     - "--gres"
+     - "gpu:<%= num_gpus %>"
      - "--time"
      - "0-<%= num_hours %>:00:00"

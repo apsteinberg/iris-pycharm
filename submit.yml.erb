@@ -1,6 +1,20 @@
 ---
 batch_connect:
   template: "vnc"
+  conn_file: "connection.yml"
+  conn_params:
+    - host
+    - port
+    - websocket
+  websockify_cmd: "/usr/bin/websockify"
+  vnc_args: nil
+  name: ""
+  geometry: ""
+  dpi: ""
+  fonts: ""
+  idle: ""
+  extra_args: ""
+  vnc_clean: "..."
 # script:
 #   queue_name : <%= buddy_queue %>
 #   wall_time: <%= 3600*buddy_num_hours.to_i %>
@@ -22,4 +36,4 @@ script:
      - "--gres"
      - "gpu:<%= num_gpus %>"
      - "--time"
-     - "0-<%= num_hours %>:00:00"
+     - "<%= num_hours %>:00:00"

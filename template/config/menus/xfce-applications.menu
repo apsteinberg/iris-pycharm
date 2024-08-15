@@ -1,4 +1,4 @@
-<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+<!DOCTYPE MENU PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
   "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
 
 <Menu>
@@ -9,7 +9,7 @@
     <DefaultMergeDirs/>
 
     <Include>
-        <All/>
+        <All>
     </Include>
 
     <Layout>

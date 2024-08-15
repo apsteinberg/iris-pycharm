@@ -12,7 +12,7 @@ attributes:
   queue:
     label: Queue
     help: "Queue your job will run on"
-    value: "componc"
+    value: "interactive"
   num_hours:
     widget: number_field
     label: "Number of hours"
@@ -21,7 +21,7 @@ attributes:
     min: 1
     max: 48
     step: 1
-    value: 2
+    value: 1
   memory:
     value: 8
     step: 4
@@ -34,7 +34,7 @@ attributes:
     min: 1
     max: 20
     step: 1
-    value: 2
+    value: 1
   pycharm_path:
     label: Path to Pycharm installation
     help: Enter path to pycharm installation

@@ -3,6 +3,7 @@
 # Clean the environment
 module purge
 
+
 # Set working directory to home directory
 cd "${HOME}"
 
@@ -30,6 +31,7 @@ cd "${HOME}"
 
 # Clear current modules 
 module purge
+module load java/20.0.1
 
 # Load git and git-lfs as the OS versions are too old
 #module load git/2.36.0-nodocs git-lfs

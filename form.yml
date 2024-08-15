@@ -3,6 +3,7 @@ cluster: "iris"
 form:
   - queue
   - num_hours
+  - memory
   - num_cores
   - pycharm_path
   - bc_vnc_resolution
@@ -21,6 +22,10 @@ attributes:
     max: 48
     step: 1
     value: 2
+  memory:
+    value: 8
+    step: 4
+    help: "Requested memory"
   num_cores:
     widget: number_field
     label: "Number of cores"

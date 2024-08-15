@@ -1,9 +1,23 @@
 ---
 batch_connect:
   template: "vnc"
+# script:
+#   queue_name : <%= buddy_queue %>
+#   wall_time: <%= 3600*buddy_num_hours.to_i %>
+#   native:
+#     - "--ntasks"
+#     - <%= buddy_num_cores.to_i %>
+
 script:
-  queue_name : <%= buddy_queue %>
-  wall_time: <%= 3600*buddy_num_hours.to_i %> 
-  native:
-    - "--ntasks"
-    - <%= buddy_num_cores.to_i %>
+  queue_name: "<%= queue %>"
+  native: # ... array of command line arguments ...
+     - "--partition"
+     - "<%= queue %>"
+     - "--nodes"
+     - 1
+     - "--ntasks"
+     - "<%= num_cores %>"
+     - "--mem"
+     - "<%= memory %>G"
+     - "--time"
+     - "0-<%= num_hours %>:00:00"

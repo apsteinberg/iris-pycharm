@@ -31,23 +31,13 @@ cd "${HOME}"
 module purge
 
 # Load git and git-lfs as the OS versions are too old
-module load git/2.36.0-nodocs git-lfs
+#module load git/2.36.0-nodocs git-lfs
 
-<%- if context.advanced == "1" -%>
-  module load <%= context.version %>
-  <%- else -%>
-    module load PyCharm/2022.3
-<%- end -%>
-
-# If additional modules were requested, load them now
-<%- if context.advanced == "1" && context.modules.blank? == false -%> 
-  # Load additional requested modules
-  module load <%= context.modules %>
-<%- end -%>
 
 # List loaded modules
 module list
 
 # Launch PyCharm
+pycharm_path=<%= context.pycharm_path %>
 set -x
-pycharm.sh
+${pycharm_path}/bin/pycharm.sh
